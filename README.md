@@ -822,7 +822,7 @@ Trouble-Shooting Situation
 
 This image is a failed ping to 192.168.19.1 from a PC in Vlan 3
 
-SOLUTION:
+Solution:
 
 <img width="374" height="233" alt="image" src="https://github.com/user-attachments/assets/a0443de6-1586-4c0d-a309-93545ee5a826" />
 
