@@ -2,7 +2,7 @@ MultiVlan Static-Routing Lab
 <img width="1091" height="461" alt="image" src="https://github.com/user-attachments/assets/f62fcf15-64f1-431b-a95f-4bce46371111" />
 3 Tier Archetecture
 
-This Project has 3 router with each router connected to to its own network. Static routes were manually configured to enable end to end connectivity across all networks.
+This Project has 3 routers with each router connected to its own network. Static routes were manually configured to enable end to end connectivity across all networks.
 
 IP Adressing Plan
 
