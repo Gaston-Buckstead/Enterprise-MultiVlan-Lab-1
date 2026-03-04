@@ -63,9 +63,10 @@ VLAN 16 – 192.168.16.0/24 – Default Gateway 192.168.16.1
 VLAN 17 – 192.168.17.0/24 – Default Gateway 192.168.17.1
 
 R3 Config.txt:
+
 Building configuration...
 
-Current configuration : 1171 bytes
+Current configuration : 1223 bytes
 !
 version 15.1
 no service timestamps log datetime msec
@@ -136,6 +137,7 @@ ip route 192.168.18.0 255.255.255.252 192.168.12.2
 ip route 192.168.15.0 255.255.255.0 192.168.12.2 
 ip route 192.168.16.0 255.255.255.0 192.168.12.2 
 ip route 192.168.17.0 255.255.255.0 192.168.12.2 
+ip route 192.168.19.0 255.255.255.252 192.168.12.2 
 !
 ip flow-export version 9
 !
@@ -160,7 +162,7 @@ R4 Config.txt:
 
 Building configuration...
 
-Current configuration : 1187 bytes
+Current configuration : 1239 bytes
 !
 version 15.1
 no service timestamps log datetime msec
@@ -230,6 +232,7 @@ ip route 192.168.18.0 255.255.255.252 192.168.18.1
 ip route 192.168.15.0 255.255.255.0 192.168.18.1 
 ip route 192.168.16.0 255.255.255.0 192.168.18.1 
 ip route 192.168.17.0 255.255.255.0 192.168.18.1 
+ip route 192.168.19.0 255.255.255.252 192.168.18.1 
 !
 ip flow-export version 9
 !
@@ -249,6 +252,7 @@ line vty 0 4
 !
 !
 end
+
 
 R5 Config.txt:
 
@@ -345,6 +349,7 @@ line vty 0 4
 !
 !
 end
+
 
 MLS3 Config.text:
 
@@ -803,3 +808,25 @@ line vty 0 4
 !
 !
 end
+
+Verification:
+
+Ping from VLAN 3 Host 192.168.3.3 to VLAN 17 Host 192.168.17.15 which confirms that inter-VLAN routing is functioning and static routes between routers are configured correctly.
+
+<img width="308" height="516" alt="image" src="https://github.com/user-attachments/assets/3af7bee7-73fc-437c-8e69-ea76a8496364" />
+
+
+Trouble-Shooting Situation
+
+<img width="363" height="416" alt="image" src="https://github.com/user-attachments/assets/79c688be-aeb0-4ea8-9c4a-8aa1d452d579" />
+
+This image is a failed ping to 192.168.19.1 from a PC in Vlan 3
+
+SOLUTION:
+
+<img width="374" height="233" alt="image" src="https://github.com/user-attachments/assets/a0443de6-1586-4c0d-a309-93545ee5a826" />
+
+Result:
+
+<img width="315" height="509" alt="image" src="https://github.com/user-attachments/assets/234685cf-858b-4cb4-ac36-b406df3f0490" />
+
