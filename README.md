@@ -14,15 +14,15 @@ Vlan 4 Subnet Network: 192.168.4.0/24 | Gateway IP: 192.168.4.1
 
 Vlan 5 Subnet Network: 192.168.5.0/24 | Gateway IP: 192.168.5.1
 
+Multilayer Switch 3: G1/0/4 interface Ip Address 192.168.11.2/30
+
 Router 4: G0/2 interface Ip Address 192.168.12.2/30, G0/1 interface Ip Address 192.168.18.2/30, G0/0 interface Ip Address 192.168.10.2/30
 
 Vlan 6 Subnet Network: 192.168.6.0/24 | Gateway IP: 192.168.6.2
 
-Router 5: G0/2 interface Ip Address 192.168.18.1/30, G0/0 interface Ip Address 192.168.19.1/30
-
-Multilayer Switch 3: G1/0/4 interface Ip Address 192.168.11.2/30
-
 Multilayer Switch 2: G1/0/1 interface Ip Address 192.168.10.1/30
+
+Router 5: G0/2 interface Ip Address 192.168.18.1/30, G0/0 interface Ip Address 192.168.19.1/30
 
 Multilayer Switch 6: G1/0/1 interface Ip Address 192.168.19.2/30
 
