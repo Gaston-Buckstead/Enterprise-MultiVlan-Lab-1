@@ -6,28 +6,58 @@ This Project has 3 router with each router connected to to its own network. Stat
 
 IP Adressing Plan
 
-Router 3: G0/2 interface Ip Address 192.168.12.1/30, G0/0 interface Ip Address 192.168.11.1
+WAN Links Router to Router
 
-Vlan 3 Subnet Network: 192.168.3.0/24 | Gateway IP: 192.168.3.1
+Network 192.168.12.0/30
 
-Vlan 4 Subnet Network: 192.168.4.0/24 | Gateway IP: 192.168.4.1
+R3 G0/2 – 192.168.12.1
 
-Vlan 5 Subnet Network: 192.168.5.0/24 | Gateway IP: 192.168.5.1
+R4 G0/2 – 192.168.12.2
 
-Multilayer Switch 3: G1/0/4 interface Ip Address 192.168.11.2/30
+Network 192.168.18.0/30
 
-Router 4: G0/2 interface Ip Address 192.168.12.2/30, G0/1 interface Ip Address 192.168.18.2/30, G0/0 interface Ip Address 192.168.10.2/30
+R4 G0/1 – 192.168.18.2
 
-Vlan 6 Subnet Network: 192.168.6.0/24 | Gateway IP: 192.168.6.2
+R5 G0/2 – 192.168.18.1
 
-Multilayer Switch 2: G1/0/1 interface Ip Address 192.168.10.1/30
+Router-to-Distribution Links
 
-Router 5: G0/2 interface Ip Address 192.168.18.1/30, G0/0 interface Ip Address 192.168.19.1/30
+Network 192.168.11.0/30
 
-Multilayer Switch 6: G1/0/1 interface Ip Address 192.168.19.2/30
+R3 G0/0 – 192.168.11.1
 
-Vlan 15 Subnet Network: 192.168.15.0/24 | Gateway IP: 192.168.15.1
+MLS3 G1/0/4 – 192.168.11.2
 
-Vlan 16 Subnet Network: 192.168.16.0/24 | Gateway IP: 192.168.16.1
+Network 192.168.10.0/30
 
-Vlan 17 Subnet Network: 192.168.17.0/24 | Gateway IP: 192.168.17.1
+R4 G0/0 – 192.168.10.2
+
+MLS2 G1/0/1 – 192.168.10.1
+
+Network 192.168.19.0/30
+
+R5 G0/0 – 192.168.19.1
+
+MLS6 G1/0/1 – 192.168.19.2
+
+VLAN Networks:
+
+On MLS3
+
+VLAN 3 – 192.168.3.0/24 – Default Gateway 192.168.3.1
+
+VLAN 4 – 192.168.4.0/24 – Default Gateway 192.168.4.1
+
+VLAN 5 – 192.168.5.0/24 – Default Gateway 192.168.5.1
+
+On MLS2
+
+VLAN 6 – 192.168.6.0/24 – Default Gateway 192.168.6.2
+
+On MLS6
+
+VLAN 15 – 192.168.15.0/24 – Default Gateway 192.168.15.1
+
+VLAN 16 – 192.168.16.0/24 – Default Gateway 192.168.16.1
+
+VLAN 17 – 192.168.17.0/24 – Default Gateway 192.168.17.1
